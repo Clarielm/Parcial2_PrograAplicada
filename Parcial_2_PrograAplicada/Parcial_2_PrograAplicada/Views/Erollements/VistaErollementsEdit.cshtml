@@ -1,0 +1,40 @@
+﻿@model Parcial_2_PrograAplicada.Models.ViewModels.ErollementsViewModel
+
+@{
+    ViewBag.Title = "VistaErollementsEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("IndexV", "Erollements", FormMethod.Post))
+{
+
+
+    <h2>REGISTRO DE EROLLEMENTS</h2>
+
+
+    @Html.LabelFor(m => m.CourseID)
+    <br />
+    @Html.TextBoxFor(m => m.CourseID)
+    <br />
+    @Html.ValidationMessageFor(m => m.CourseID, null)
+    <br />
+    <br />
+    @Html.LabelFor(m => m.StudentID)
+    <br />
+    @Html.TextBoxFor(m => m.StudentID)
+    <br />
+    @Html.ValidationMessageFor(m => m.StudentID, null)
+    <br />
+    <br />
+    @Html.LabelFor(m => m.Grade)
+    <br />
+    @Html.TextBoxFor(m => m.Grade)
+    <br />
+    @Html.ValidationMessageFor(m => m.Grade, null)
+    <br />
+
+    <br />
+    <input type="submit" />
+
+}
+

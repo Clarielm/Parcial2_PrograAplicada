@@ -1,0 +1,41 @@
+﻿@model Parcial_2_PrograAplicada.Models.ViewModels.StudentsViewModel
+
+@{
+    ViewBag.Title = "VistaStudentsEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("IndexV", "Students", FormMethod.Post))
+{
+
+
+    <h2>REGISTRO DE ESTUDIANTES</h2>
+
+
+
+    @Html.LabelFor(m => m.LastName)
+    <br />
+    @Html.TextBoxFor(m => m.LastName)
+    <br />
+    @Html.ValidationMessageFor(m => m.LastName, null)
+    <br />
+    <br />
+    @Html.LabelFor(m => m.FirstMidName)
+    <br />
+    @Html.TextBoxFor(m => m.FirstMidName)
+    <br />
+    @Html.ValidationMessageFor(m => m.FirstMidName, null)
+    <br />
+    <br />
+    @Html.LabelFor(m => m.EnrrollmentsDate)
+    <br />
+    @Html.TextBoxFor(m => m.EnrrollmentsDate)
+    <br />
+    @Html.ValidationMessageFor(m => m.EnrrollmentsDate, null)
+    <br />
+
+
+    <br />
+    <input type="submit" />
+
+}

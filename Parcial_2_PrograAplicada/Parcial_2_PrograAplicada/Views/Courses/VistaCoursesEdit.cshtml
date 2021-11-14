@@ -1,0 +1,35 @@
+﻿@model Parcial_2_PrograAplicada.Models.ViewModels.CoursesViewModel
+
+@{
+    ViewBag.Title = "VistaCoursesEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("IndexV", "Courses", FormMethod.Post))
+{
+
+
+    <h2>REGISTRO DE CURSO</h2>
+
+
+
+    @Html.LabelFor(m => m.Title)
+    <br />
+    @Html.TextBoxFor(m => m.Title)
+    <br />
+    @Html.ValidationMessageFor(m => m.Title, null)
+    <br />
+    <br />
+    @Html.LabelFor(m => m.Credits)
+    <br />
+    @Html.TextBoxFor(m => m.Credits)
+    <br />
+    @Html.ValidationMessageFor(m => m.Credits, null)
+    <br />   
+
+
+    <br />
+    <input type="submit" />
+
+}
+

@@ -1,0 +1,47 @@
+﻿@model List<Parcial_2_PrograAplicada.Models.Courses>
+
+@{
+    ViewBag.Title = "VistaCourses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listado de Cursos</h2>
+<br />
+<a href="~/Views/Courses/VistaCoursesEdit.cshtml" class="btn btn-success"> NUEVO </a>
+<br />
+<br />
+
+
+<table class="table table-dark table-striped">
+    <thead>
+    <th>TITLE</th>
+    <th>CREDITS</th>
+    <th>ACCIONES</th>
+
+    </thead>
+
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>@item.Title</td>
+                <td>@item.Credits</td>
+
+                <td>
+                    <a href="VistaCoursesEdit.cshtml" class="btn btn-warning">
+                        EDITAR <a>
+                            <a href="~/Controllers/CoursesController.cs/Eliminar" class="btn btn-danger">ELIMINAR <a>
+                </td>
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
+

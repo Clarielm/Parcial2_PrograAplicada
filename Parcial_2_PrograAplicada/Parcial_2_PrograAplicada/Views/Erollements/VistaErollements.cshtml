@@ -1,0 +1,48 @@
+﻿@model List<Parcial_2_PrograAplicada.Models.Erollements>
+
+@{
+    ViewBag.Title = "VistaErollements";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listado de Erollements</h2>
+<br />
+<a href="~/Views/Students/VistaStudentsEdit.cshtml" class="btn btn-success"> NUEVO </a>
+<br />
+<br />
+
+
+<table class="table table-dark table-striped">
+    <thead>
+    <th>Course</th>
+    <th>Student</th>
+    <th>Grade</th>
+    <th>Acciones</th>
+    </thead>
+
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>@item.CourseID</td>
+                <td>@item.StudentID</td>
+                <td>@item.Grade</td>
+                <td>
+                    <a href="~/Views/Erollements/VistaErollementsEdit.cshtml" class="btn btn-warning">
+                        EDITAR <a>
+                            <a href="~/Controllers/ErollementsController.cs/Eliminar" class="btn btn-danger">ELIMINAR <a>
+                </td>
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>
+
+
